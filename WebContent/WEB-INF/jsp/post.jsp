@@ -38,7 +38,7 @@
 			<th
 				rowspan="<%=2 +
 								2 * result.getResult().getPrediction().getIntents().length +
-								3 * result.getResult().getPrediction().getEntities().length%>
+								3 * result.getResult().getPrediction().getEntities().length %>
 		%>">prediction</th>
 			<th>topIntent</th>
 			<td><%=result.getResult().getPrediction().getTopIntent()%></td>
@@ -62,11 +62,10 @@
 			}
 		%>
 
+			<th rowspan="<%= 2* result.getResult().getPrediction().getEntities().length %>">entity</th>
 		<%
 			for (Entity es : result.getResult().getPrediction().getEntities()) {
 		%>
-		<tr>
-			<th rowspan="2">entity</th>
 			<td rowspan="2">category : <%=es.getCategory()%></td>
 			<td>( text : <%=es.getText()%> )
 			</td>
