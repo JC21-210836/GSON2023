@@ -11,15 +11,9 @@
 SENDAI-KANKO
 </H1>
 
-<form action="./post" method="post">
-<table border=1>
-<tr><th>WebAPIのURL</th><td>https://clu2023.cognitiveservices.azure.com</td></tr>
-<tr><th>projectName</th><td>SENDAI-KANKO</td></tr>
-<tr><th>deploymentName</th><td>sendai-kanko</td></tr>
-<tr><th>stringIndexType</th><td>TextElement_V8</td></tr>
-<tr><th>Ocp-Apim-Subscription-Key</th><td><input type="text" name="key" required="required" placeholder="32 character" /></td></tr>
+<form action="./post2" method="post">
 
-</table>
+
 
 <table border=1>
 <tr><th>id</th><td>1</td></tr>
