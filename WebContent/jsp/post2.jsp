@@ -31,10 +31,10 @@
 	
 	<hr>
 	<H3>[質問]</H3>
-	<%= optTextLog.get().get(optTextLog.get().size()-2) %>
+	<%= optTextLog.get().get(optTextLog.get().size()-1) %>
 	<hr>
 	<H3>[回答]</H3>
-	<%= optHtmlLog.get().get(optHtmlLog.get().size()-2) %>
+	<%= optHtmlLog.get().get(optHtmlLog.get().size()-1) %>
 	
 	
 	<% } else {%>
