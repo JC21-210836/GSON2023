@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class IndexServlet
  */
-@WebServlet(urlPatterns = {"/index", "/index.html", "/"})
+@WebServlet(urlPatterns = {"/index", "/index.html"})
 public class IndexServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 

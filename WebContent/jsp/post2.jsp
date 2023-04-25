@@ -9,7 +9,7 @@
 <html>
 <head>
 
-<link rel="stylesheet" type="text/css" href="xxx.css">
+<link rel="stylesheet" type="text/css" href="./jsp/xxx.css">
 
 <meta charset="UTF-8">
 <title>Insert title here</title>
@@ -19,6 +19,9 @@
 <%
 	Optional<ArrayList<String>> optTextLog = Optional.ofNullable(
 			(ArrayList<String>) request.getAttribute("textLog"));
+
+	int logSize = optTextLog.get().size();
+
 	Optional<ArrayList<String>> optHtmlLog = Optional.ofNullable(
 			(ArrayList<String>) request.getAttribute("htmlLog"));
 %>
@@ -28,7 +31,7 @@
 	%>
 	<H1>実行結果：成功</H1>
 
-	
+	<!--
 	<hr>
 	<H3>[質問]</H3>
 	<%= optTextLog.get().get(optTextLog.get().size()-1) %>
@@ -36,13 +39,123 @@
 	<H3>[回答]</H3>
 	<%= optHtmlLog.get().get(optHtmlLog.get().size()-1) %>
 	
+	 -->
 	
 	<% } else {%>
 	<H1>実行結果：null</H1>
 	<% }%>
 	
 
-	<hr>
+
+	
+	<% if(logSize >= 6 ){
+		String message = optTextLog.get().get(logSize-6);%>
+	<H3>[質問]</H3>
+	<%= optTextLog.get().get(optTextLog.get().size()-6) %>
+	<H3>[回答]</H3>
+	<%= optHtmlLog.get().get(optHtmlLog.get().size()-6) %>
+	<!--<tr >
+	<td  align="right" width=10%>
+	<td  align="right" width=80%>
+	<div class="balloon2-right">
+	  <p><%= message %></p>
+	</div>
+	</td>
+	<td width=10% align="center"><img src="Image-2.png" width=100%></td>
+	</tr>
+	  -->
+	<% } %>
+	<% if(logSize >= 5 ){ 
+		String message = optTextLog.get().get(logSize-5);%>
+	<H3>[質問]</H3>
+	<%= optTextLog.get().get(optTextLog.get().size()-5) %>
+	<H3>[回答]</H3>
+	<%= optHtmlLog.get().get(optHtmlLog.get().size()-5) %>
+	<!-- 
+	<tr >
+	<td width=10% align="center"><img src="Image-1.png" width=100%></td>
+	<td colspan="2" width=80%>
+	<div class="balloon2-left">
+	  <p><%= message %></p>
+	</div></td>
+	<td  align="right" width=10%>
+	</tr>
+	 -->
+	<% } %>
+	
+	<% if(logSize >= 4 ){ 
+		String message = optTextLog.get().get(logSize-4);%>
+	<H3>[質問]</H3>
+	<%= optTextLog.get().get(optTextLog.get().size()-4) %>
+	<H3>[回答]</H3>
+	<%= optHtmlLog.get().get(optHtmlLog.get().size()-4) %>
+	<!-- 
+	<tr >
+	<td  align="right" width=10%>
+	<td  align="right" width=80%>
+	<div class="balloon2-right">
+	  <p><%= message %></p>
+	</div>
+	</td>
+	<td width=10% align="center"><img src="Image-2.png" width=100%></td>
+	</tr>
+	 -->
+	<% } %>
+	<% if(logSize >= 3 ){ 
+		String message = optTextLog.get().get(logSize-3);%>
+	<H3>[質問]</H3>
+	<%= optTextLog.get().get(optTextLog.get().size()-3) %>
+	<H3>[回答]</H3>
+	<%= optHtmlLog.get().get(optHtmlLog.get().size()-3) %>
+	<!-- 
+	<tr >
+	<td width=10% align="center"><img src="Image-1.png" width=100%></td>
+	<td colspan="2" width=80%>
+	<div class="balloon2-left">
+	  <p><%= message %></p>
+	</div></td>
+	<td  align="right" width=10%>
+	</tr>
+	 -->
+	<% } %>
+	
+	<% if(logSize >= 2 ){ 
+		String message = optTextLog.get().get(logSize-2);%>
+	<H3>[質問]</H3>
+	<%= optTextLog.get().get(optTextLog.get().size()-2) %>
+	<H3>[回答]</H3>
+	<%= optHtmlLog.get().get(optHtmlLog.get().size()-2) %>
+	<!-- <tr >
+	<td  align="right" width=10%>
+	<td  align="right" width=80%>
+	<div class="balloon2-right">
+	  <p><%= message %></p>
+	</div>
+	</td>
+	<td width=10% align="center"><img src="Image-2.png" width=100%></td>
+	</tr>
+	 -->
+	<% } %>
+	<% if(logSize >= 1 ){ 
+		String message = optTextLog.get().get(logSize-1);%>
+	<H3>[質問]</H3>
+	<%= optTextLog.get().get(optTextLog.get().size()-1) %>
+	<H3>[回答]</H3>
+	<%= optHtmlLog.get().get(optHtmlLog.get().size()-1) %>
+	<!-- 
+	<tr >
+	<td width=10% align="center"><img src="Image-1.png" width=100%></td>
+	<td colspan="2" width=80%>
+	<div class="balloon2-left">
+	  <p><%= message %></p>
+	</div></td>
+	<td  align="right" width=10%>
+	</tr>
+	 -->
+	<% } %>
+	
+	 
+	<!--<hr> -->
 	<H3>[質問]</H3>
 		<form action="./post2" method="POST">
 	<input type="text" name="text" placeholder="質問してください" />
@@ -50,6 +163,7 @@
 	<button type="submit"  class="btn btn-success" >話す</button>
 	
 	</form>
+	
 	<!-- 
 	</td>
 	<td width=10%><img src="Image-2.png" width=100%></td>

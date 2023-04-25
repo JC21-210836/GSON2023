@@ -85,7 +85,7 @@ public class PostServlet2 extends HttpServlet {
 				html="";
 				for (Entity es : result.getResult().getPrediction().getEntities()) {
 			
-					html+="<h1>"+es.getText()+"を食べよう！</h1>"+
+					html+="<h3>"+es.getText()+"を食べよう！</h3>"+
 							"<a href='https://www.google.com/search?q="+ es.getText() +
 							"+%E3%81%8A%E3%81%99%E3%81%99%E3%82%81'>おいしい店を紹介します</a>";
 				}
@@ -94,7 +94,7 @@ public class PostServlet2 extends HttpServlet {
 			if(result.getResult().getPrediction().getTopIntent().equals("place")){
 				html="";
 				for (Entity es : result.getResult().getPrediction().getEntities()) {
-					html+="<h1>"+ es.getText()+"に行こう！</h1>"+
+					html+="<h3>"+ es.getText()+"に行こう！</h3>"+
 							"<a href='https://www.google.com/search?q="+ es.getText()+
 							"+%E3%80%80行き方'>行き方を紹介します</a>";
 				}
