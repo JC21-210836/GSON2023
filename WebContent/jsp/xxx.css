@@ -1,7 +1,16 @@
 @charset "UTF-8";
 
 h1 {
-	color: red;
+	color: green;
+	text-align: center;
+}
+
+h2{
+	text-align: center;
+}
+
+#quest{
+	text-align: center;
 }
 
 .balloon2-left {
@@ -16,6 +25,7 @@ h1 {
 	background: #FFF;
 	border: solid 3px #555;
 	box-sizing: border-box;
+	border-radius: 30px;
 }
 
 .balloon2-left:before {
@@ -27,6 +37,7 @@ h1 {
 	border: 12px solid transparent;
 	border-right: 12px solid #FFF;
 	z-index: 2;
+	
 }
 
 .balloon2-left:after {
@@ -38,6 +49,7 @@ h1 {
 	border: 14px solid transparent;
 	border-right: 14px solid #555;
 	z-index: 1;
+	
 }
 
 .balloon2-left p {
@@ -57,28 +69,31 @@ h1 {
 	background: #FFF;
 	border: solid 3px #555;
 	box-sizing: border-box;
+	border-radius: 15px;
 }
 
 .balloon2-right:before {
 	content: "";
 	position: absolute;
 	top: 50%;
-	right: -24px;
+	right: -22px;
 	margin-top: -12px;
 	border: 12px solid transparent;
 	border-left: 12px solid #FFF;
 	z-index: 2;
+	
 }
 
 .balloon2-right:after {
 	content: "";
 	position: absolute;
 	top: 50%;
-	right: -30px;
+	right: -28px;
 	margin-top: -14px;
 	border: 14px solid transparent;
 	border-left: 14px solid #555;
 	z-index: 1;
+	
 }
 
 .balloon2-right p {

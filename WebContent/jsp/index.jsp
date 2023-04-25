@@ -3,8 +3,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="./jsp/xxx.css">
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>SENDAI-KANKO</title>
 </head>
 <body>
 <H1>
@@ -22,9 +23,12 @@ SENDAI-KANKO
 <input type="submit" value="AI処理" />
   -->
  
- <H3>[質問]</H3>
-	<input type="text" name="text" placeholder="質問してください" />
-	<button type="submit"  class="btn btn-success" >話す</button>
+ <H2>質問してください</H2>
+ <hr>
+ 	<div id="quest">
+		<input type="text" name="text" placeholder="質問してください" />
+		<button type="submit"  class="btn btn-success" >話す</button>
+	</div>
 </form>
 
 </body>
