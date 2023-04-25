@@ -30,31 +30,6 @@ public class PostServlet2 extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		response.setCharacterEncoding("UTF-8");
 
-	/*  String message = "へんじがない";
-		HttpSession session = request.getSession();
-		ArrayList<String> messageLog = (ArrayList<String>) session.getAttribute("messageLog");
-		if (messageLog == null) {
-			messageLog = new ArrayList<String>();
-		}
-		String q = request.getParameter("q");
-
-		try {
-			Luis result = LuisTest01.getResult(q);
-			message = makeMessage(result);
-		} catch (URISyntaxException e) {
-			e.printStackTrace();
-			e.printStackTrace(response.getWriter());
-		}
-
-		messageLog.add(q);
-		messageLog.add(message);
-		session.setAttribute("messageLog", messageLog);
-
-		request.setAttribute("MESSAGE", messageLog);
-
-		RequestDispatcher rd = request.getRequestDispatcher("/AiSpeaker.jsp");
-		rd.forward(request, response);
-	*/
 		
 		// 保存されているか確認する
 		HttpSession session = request.getSession();
